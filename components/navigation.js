@@ -32,7 +32,7 @@ export default function Navigation() {
                       active === item.link
                         ? "text-accent-1 font-bold"
                         : "text-white font-bold"
-                    } no-underline duration-200 transition-colors link link-underline link-underline-black text-white`}
+                    } no-underline duration-200 transition-colors link link-underline link-underline-black hover:text-white text-white`}
                   >
                     {item.name}
                   </Link>
