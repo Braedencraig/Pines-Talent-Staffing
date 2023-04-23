@@ -17,7 +17,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-xl mx-auto">
       <div className="mb-6">
-        <label htmlFor="firstName" className="block font-bold mb-2 text-white">
+        <label htmlFor="firstName" className="block font-bold mb-2 text-black">
           First Name
         </label>
         <input
@@ -28,14 +28,14 @@ export default function ContactForm() {
           onChange={(e) =>
             setFormValues({ ...formValues, firstName: e.target.value })
           }
-          className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-white bg-black"
+          className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-black bg-white"
         />
         {errors.firstName && (
           <span className="text-[#a1c4a3]">This field is required</span>
         )}
       </div>
       <div className="mb-6">
-        <label htmlFor="lastName" className="block font-bold mb-2 text-white">
+        <label htmlFor="lastName" className="block font-bold mb-2 text-black">
           Last Name
         </label>
         <input
@@ -46,7 +46,7 @@ export default function ContactForm() {
           {...register("lastName", { required: true })}
           type="text"
           id="lastName"
-          className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-white bg-black"
+          className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-black bg-white"
         />
         {errors.lastName && (
           <span className="text-[#a1c4a3]">This field is required</span>
@@ -54,7 +54,7 @@ export default function ContactForm() {
       </div>
       <div className="mb-6 flex w-full">
         <div className="flex flex-col w-[50%]">
-          <label htmlFor="email" className="block font-bold mb-2 text-white">
+          <label htmlFor="email" className="block font-bold mb-2 text-black">
             Email
           </label>
           <input
@@ -65,14 +65,14 @@ export default function ContactForm() {
             {...register("email", { required: true })}
             type="email"
             id="email"
-            className="px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 mr-2 text-white bg-black"
+            className="px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 mr-2 text-black bg-white"
           />
           {errors.email && (
             <span className="text-[#a1c4a3]">This field is required</span>
           )}
         </div>
         <div className="flex flex-col w-[50%]">
-          <label htmlFor="phone" className="block font-bold mb-2 text-white">
+          <label htmlFor="phone" className="block font-bold mb-2 text-black">
             Phone
           </label>
           <input
@@ -83,7 +83,7 @@ export default function ContactForm() {
               setFormValues({ ...formValues, phone: e.target.value })
             }
             id="phone"
-            className="px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 ml-2 text-white bg-black"
+            className="px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 ml-2 text-black bg-white"
           />
           {errors.phone && (
             <span className="text-[#a1c4a3]">This field is required</span>
@@ -93,7 +93,7 @@ export default function ContactForm() {
       <div className="mb-6">
         <label
           htmlFor="jobDescription"
-          className="block font-bold mb-2 text-white"
+          className="block font-bold mb-2 text-black"
         >
           Job Description
         </label>
@@ -105,7 +105,7 @@ export default function ContactForm() {
           }
           {...register("jobDescription", { required: true })}
           id="jobDescription"
-          className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-white bg-black"
+          className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-black bg-white"
         />
         {errors.jobDescription && (
           <span className="text-[#a1c4a3]">This field is required</span>
@@ -114,7 +114,7 @@ export default function ContactForm() {
       <div className="w-full m-auto flex justify-center">
         <button
           type="submit"
-          className="bg-white text-black px-4 py-2 w-[200px] hover:bg-[#a1c4a3] focus:outline-none focus:bg-[#a1c4a3]"
+          className="bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
         >
           Submit
         </button>

@@ -11,7 +11,7 @@ export default function Navigation() {
   }, []);
   const { navItems } = data;
   return (
-    <div className="absolute top-0 left-0 right-0">
+    <div className="absolute top-0 left-0 right-0 bg-black">
       <Container>
         <nav className="items-start justify-between flex-wrap py-6 hidden md:flex">
           <div>

@@ -8,7 +8,7 @@ export default function Layout({ preview, children }) {
       <Meta />
       <div className="min-h-screen">
         <Navigation />
-        <main>{children}</main>
+        <main className="getintouch">{children}</main>
       </div>
       <Footer />
     </>
