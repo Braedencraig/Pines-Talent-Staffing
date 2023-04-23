@@ -11,7 +11,7 @@ export default function ContactForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    console.log(data, "data");
   };
 
   return (
