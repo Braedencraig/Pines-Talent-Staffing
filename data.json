@@ -1,0 +1,28 @@
+{
+    "navItems": [
+        {
+            "name": "Job Postings",
+            "link": "/job-postings"
+        },
+        {
+            "name": "Employer Services",
+            "link": "/employer-services"
+        },
+        {
+            "name": "Applicant Services",
+            "link": "/applicant-services"
+        },
+         {
+            "name": "About",
+            "link": "/about"
+        },
+        {
+            "name": "Contact",
+            "link": "/contact"
+        }
+    ],
+    "hero": {
+        "title": "Pines Talent",
+        "subtitle": "Staffing & Consulting"
+    }
+}
