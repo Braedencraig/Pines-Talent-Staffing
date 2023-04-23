@@ -13,7 +13,7 @@ export default function Navigation() {
   return (
     <div className="absolute top-0 left-0 right-0 bg-black">
       <Container>
-        <nav className="items-start justify-between flex-wrap py-6 hidden md:flex">
+        <nav className="items-start justify-between flex-wrap py-6 hidden lg:flex">
           <div>
             <Link
               href="/"
@@ -41,15 +41,15 @@ export default function Navigation() {
             })}
           </ul>
         </nav>
-        <nav className="md:hidden relative py-3">
-          <div>
+        <nav className="lg:hidden relative py-3">
+          {/* <div>
             <Link
               href="/"
               className="text-white max-h-[68px] max-w-[67px] absolute left-0 right-0 top-0 bottom-0 m-auto"
             >
               *logo here*
             </Link>
-          </div>
+          </div> */}
           <Header navItems={navItems} />
         </nav>
       </Container>

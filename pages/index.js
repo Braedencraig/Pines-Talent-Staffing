@@ -105,11 +105,11 @@ export default function Index({ preview, allPosts }) {
         <Head>
           <title>{`Home | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero mt-[72px]">
+        <div className="hero mt-0 lg:mt-[72px]">
           <div className="flex flex-col text-center text-white">
             <FadeInSection key={1}>
-              <h1 className="text-[100px]">{hero.title}</h1>
-              <h2 className="text-5xl">{hero.subtitle}</h2>
+              <h1 className="text-[60px] lg:text-[100px]">{hero.title}</h1>
+              <h2 className="text-2xl lg:text-5xl">{hero.subtitle}</h2>
             </FadeInSection>
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function Index({ preview, allPosts }) {
             <ContactForm />
           </FadeInSection>
           <FadeInSection key={6}>
-            <div className="flex mt-16 mb-16">
+            <div className="flex mt-16 mb-16 lg:flex-row flex-col">
               <figure class="item">
                 <div style={{ "--img": "url(/assets/img1.jpg)" }}></div>
                 <div

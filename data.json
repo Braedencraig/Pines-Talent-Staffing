@@ -1,28 +1,51 @@
 {
-    "navItems": [
-        {
-            "name": "Job Postings",
-            "link": "/job-postings"
-        },
-        {
-            "name": "Employer Services",
-            "link": "/employer-services"
-        },
-        {
-            "name": "Applicant Services",
-            "link": "/applicant-services"
-        },
-         {
-            "name": "About",
-            "link": "/about"
-        },
-        {
-            "name": "Contact",
-            "link": "/contact"
-        }
-    ],
-    "hero": {
-        "title": "Pines Talent",
-        "subtitle": "Staffing & Consulting"
+  "navItems": [
+    {
+      "name": "Job Postings",
+      "link": "/job-postings"
+    },
+    {
+      "name": "Employer Services",
+      "link": "/employer-services"
+    },
+    {
+      "name": "Applicant Services",
+      "link": "/applicant-services"
+    },
+    {
+      "name": "About",
+      "link": "/about"
+    },
+    {
+      "name": "Contact",
+      "link": "/contact"
     }
+  ],
+  "hero": {
+    "title": "Pines Talent",
+    "subtitle": "Staffing & Consulting"
+  },
+  "job": {
+    "title": "Job Postings",
+    "subtitle": "The next step in your career"
+  },
+  "employer": {
+    "title": "Employer Services",
+    "subtitle": "Welcome to our staffing services, where we offer tailored solutions to meet your unique hiring needs. Whether you're a startup looking to grow your team, or an established company seeking ongoing staffing support, we have the expertise and flexibility to help you achieve your goals.",
+    "parts": [
+      {
+        "title": "Contingency Based Staffing Service",
+        "copy": "Our contingency-based staffing services is designed to provide a customized solution allow you to pay as you go, giving you the freedom to access our services as needed without long-term commitments."
+      },
+      {
+        "title": "Subscription Based Staffing Service",
+        "copy": "Our subscription-based staffing services is ideal for clients that require ongoing Staffing Support or for high-growth stage companies seeking to hire for multiple roles. We'll work closely with you to develop a plan that meets your needs, ensuring that you have the right people in place to build strong teams. Our Subscription services can also be paired with our People Operations Support services (see below)."
+      },
+      {
+        "title": "People Operations Support Service",
+        "copy": "We understand that finding the right talent is only half the battle; retaining and engaging that talent is equally important. That's why we offer a suite of People Operations Support  services designed to help your company not only attract the best candidates but  keep them motivated and engaged. We help you develop onboarding strategies for new talent and aid in retention and development plans for your existing star players. "
+      }
+    ],
+    "bottom": "Request Your Free Consultation Today!"
+  }
 }
