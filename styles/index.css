@@ -1026,12 +1026,21 @@ blockquote {
   }
 }
 
+@media screen and (max-width: 1600px) {
+  .services {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 768px;
+    padding: 0 2rem;
+  }
+}
+
+
 
 @media screen and (max-width: 1200px) {
   .item {
     width: 100%;
     transition: all 0.3s ease;
-
   }
 }
 

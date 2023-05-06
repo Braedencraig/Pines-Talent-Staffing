@@ -108,12 +108,14 @@ export default function Index({ preview, allPosts }) {
         <Head>
           <title>{`Applicant Services | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero-job mt-0 lg:mt-[72px]">
+        <div className="hero-job mt-[100px] lg:mt-[72px]">
           <FadeInSection
-            classNames="flex flex-col bg-white text-black w-full lg:w-1/2 max-w-[748px]"
+            classNames="flex flex-col bg-white text-black w-full lg:w-1/2 max-w-[748px] services"
             key={1}
           >
-            <h1 className="text-[40px] text-[60px] mb-6">Applicant Services</h1>
+            <h1 className="text-[40px] lg:text-[60px] mb-6 font-bold">
+              Applicant Services
+            </h1>
             <h2 className="text-xl mb-6">
               Looking to boost your chances of landing your dream job?
             </h2>
@@ -126,7 +128,10 @@ export default function Index({ preview, allPosts }) {
         <Container>
           <div className="flex flex-col justify-center items-center">
             {applicant.parts.map((part, index) => (
-              <div className="flex flex-col w-full lg:w-1/2" key={index}>
+              <div
+                className="flex flex-col w-full lg:w-1/2 services"
+                key={index}
+              >
                 <FadeInSection key={index}>
                   <h2 className="text-2xl mb-4 font-black">{part.title}</h2>
                   <p className="mb-8">{part.copy}</p>
@@ -136,7 +141,7 @@ export default function Index({ preview, allPosts }) {
           </div>
           <FadeInSection key={12}>
             <div>
-              <h1 className="text-[28px] text-[40px] my-8 text-center">
+              <h1 className="text-[22px] lg:text-[30px] my-8 text-center">
                 Request Your Free Consultation Today
               </h1>
             </div>
