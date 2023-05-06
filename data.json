@@ -47,5 +47,24 @@
       }
     ],
     "bottom": "Request Your Free Consultation Today!"
+  },
+  "applicant": {
+    "title": "Applicant Services",
+    "subtitle1": "Looking to boost your chances of landing your dream job?",
+    "subtitle2": "We offer a suite of applicant services designed to equip you with the tools and guidance you need to stand out in the job market.",
+    "parts": [
+      {
+        "title": "Resume Review",
+        "copy": "Our resume review service provides a virtual review session to help you present your skills and experience in the best possible light. We offer a thorough review of your resume, including editing, formatting, and content recommendations. With our expert guidance, your resume will showcase your strengths and achievements effectively."
+      },
+      {
+        "title": "Career Consultation",
+        "copy": "For those seeking personalized guidance and advice, our career consultation service offers a virtual session to help you identify your strengths, interests, and career goals. We provide personalized guidance and advice to help you determine a clear career roadmap. With our support, you'll be well-equipped to achieve your career aspirations."
+      },
+      {
+        "title": "Interview Preparation",
+        "copy": "Finally, our interview preparation service offers a virtual session with a professional interviewer, who will provide valuable feedback and coaching, as well as a mock interview to help you feel confident for your upcoming interview. With our guidance, you'll be able to ace your interviews and land the job you deserve."
+      }
+    ]
   }
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Container from "../components/container";
 import Layout from "../components/layout";
 import { getAllPostsForHome } from "../lib/api";
@@ -6,11 +6,11 @@ import Head from "next/head";
 import data from "../data.json";
 import classNames from "classnames";
 import FadeInSection from "../components/fadein";
-import ContactForm from "../components/contactform";
-import Link from "next/link";
+import ContactGeneral from "../components/contactgeneral";
+import Map from "../components/map";
 
 export default function Index({ preview, allPosts }) {
-  const { employer } = data;
+  const { hero } = data;
 
   const isMobile = () => {
     const ua = navigator.userAgent;
@@ -100,52 +100,43 @@ export default function Index({ preview, allPosts }) {
     );
   };
 
-  //   parts, bottom
-
   return (
     <>
       <Layout preview={preview}>
         <Head>
-          <title>{`Employeer Services | Pines Talent Staffing & Consulting`}</title>
+          <title>{`Home | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero-job mt-0 lg:mt-[72px]">
-          <FadeInSection
-            classNames="flex flex-col bg-white text-black w-full lg:w-1/2 max-w-[748px]"
-            key={1}
-          >
-            <h1 className="text-[40px] text-[60px] mb-12">{employer.title}</h1>
-            <h2 className="text-xl">{employer.subtitle}</h2>
-          </FadeInSection>
+        <div className="mt-0 lg:mt-[72px]">
+          <div className="flex flex-col text-center bg-white text-black pt-28 lg:pt-20 mb-8">
+            <FadeInSection key={1}>
+              <h1 className="text-[40px] lg:text-[60px]">Contact Us</h1>
+            </FadeInSection>
+          </div>
         </div>
         <Container>
-          <div className="flex flex-col justify-center items-center">
-            {employer.parts.map((part, index) => (
-              <div className="flex flex-col w-full lg:w-1/2" key={index}>
-                <FadeInSection key={index}>
-                  <h2 className="text-2xl mb-4 font-black">{part.title}</h2>
-                  <p className="mb-8">{part.copy}</p>
-                </FadeInSection>
-              </div>
-            ))}
-          </div>
-          <FadeInSection key={12}>
-            <div>
-              <h1 className="text-[28px] text-[40px] my-8 text-center">
-                Request Your Free Consultation Today
-              </h1>
-            </div>
-            <div className="w-full m-auto flex justify-center mb-16 mt-6">
-              <Link
-                href="/contact"
-                className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
-              >
-                Contact
-              </Link>
-            </div>
+          <FadeInSection
+            classNames="flex flex-col justify-center items-center text-center mt-4 mb-8"
+            key={3}
+          >
+            {/* <div className="flex flex-col justify-center items-center text-center mt-4 pb-8"> */}
+            <ContactGeneral />
+            {/* </div> */}
           </FadeInSection>
         </Container>
+        <div className="min-h-[33vh]">
+          <FadeInSection key={2}>
+            <Map />
+          </FadeInSection>
+        </div>
       </Layout>
       <Cursor />
     </>
   );
+}
+
+export async function getStaticProps({ preview = false }) {
+  const allPosts = (await getAllPostsForHome(preview)) ?? [];
+  return {
+    props: { preview, allPosts },
+  };
 }

@@ -4,13 +4,11 @@ import Layout from "../components/layout";
 import { getAllPostsForHome } from "../lib/api";
 import Head from "next/head";
 import data from "../data.json";
+import Link from "next/link";
 import classNames from "classnames";
 import FadeInSection from "../components/fadein";
-import ContactForm from "../components/contactform";
 
 export default function Index({ preview, allPosts }) {
-  const { job } = data;
-
   const isMobile = () => {
     const ua = navigator.userAgent;
     return /Android|Mobi/i.test(ua);
@@ -103,17 +101,64 @@ export default function Index({ preview, allPosts }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>{`Job Postings | Pines Talent Staffing & Consulting`}</title>
+          <title>{`About | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero-job mt-0 lg:mt-[72px]">
-          <div className="flex flex-col text-center bg-white text-black">
+        <div className="mt-0 lg:mt-[72px] mb-[72px] min-h-[75vh]">
+          <div className="flex flex-col text-center text-black mt-40">
             <FadeInSection key={1}>
-              <h1 className="text-[40px] text-[60px]">{job.title}</h1>
-              <h2 className="text-2xl">{job.subtitle}</h2>
+              <Container>
+                <div className="flex flex-col lg:flex-row w-full m-auto justify-between">
+                  <div className="w-[100%] lg:w-[45%]">
+                    <img
+                      className="h-[100%] object-cover"
+                      src={"/assets/about.jpg"}
+                      alt="Puzzle Pieces"
+                    />
+                  </div>
+                  <div className="w-[100%] lg:w-[45%]">
+                    <h1 className="text-[40px] lg:text-[60px] mb-12 mt-12 lg:mt-0">
+                      Building Better Teams
+                    </h1>
+                    <p className="mb-12">
+                      At Pines Talent, we understand that finding the right
+                      talent is crucial to the success of your business and the
+                      productivity of your teams. With a particular focus on
+                      marketing, creative, and technology placements, we offer
+                      tailored staffing services that support our
+                      industry-leading clients secure top talent in their
+                      markets. We pride ourselves on taking a people-first
+                      approach to staffing. That’s why we take the time to
+                      discover the unique needs of each of our clients and
+                      strive to build long-lasting partnerships based on trust
+                      and transparency. Our services are designed to both
+                      support, or work in lieu of, your internal Talent
+                      Acquisition teams and streamline your hiring process.{" "}
+                    </p>
+                    <p className="mb-12">
+                      Our extensive network of industry professionals,
+                      multi-prong vetting process, and candidate pre-screening,
+                      allows us to connect clients with the right talent quickly
+                      and efficiently. We take the time to get to know each
+                      individual, their career goals, and their unique skill
+                      set. This allows us to provide personalized, tailored
+                      services that meet the specific needs of each client and
+                      candidate. Whether you're a company looking for the right
+                      candidate to join your team, or a professional searching
+                      for your next career opportunity, we're here to help.
+                    </p>
+                    <Link
+                      href="/contact"
+                      type="submit"
+                      className="bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+                    >
+                      Contact
+                    </Link>
+                  </div>
+                </div>
+              </Container>
             </FadeInSection>
           </div>
         </div>
-        <Container>asdas</Container>
       </Layout>
       <Cursor />
     </>

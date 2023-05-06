@@ -10,7 +10,7 @@ import ContactForm from "../components/contactform";
 import Link from "next/link";
 
 export default function Index({ preview, allPosts }) {
-  const { employer } = data;
+  const { applicant } = data;
 
   const isMobile = () => {
     const ua = navigator.userAgent;
@@ -106,20 +106,26 @@ export default function Index({ preview, allPosts }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>{`Employeer Services | Pines Talent Staffing & Consulting`}</title>
+          <title>{`Applicant Services | Pines Talent Staffing & Consulting`}</title>
         </Head>
         <div className="hero-job mt-0 lg:mt-[72px]">
           <FadeInSection
             classNames="flex flex-col bg-white text-black w-full lg:w-1/2 max-w-[748px]"
             key={1}
           >
-            <h1 className="text-[40px] text-[60px] mb-12">{employer.title}</h1>
-            <h2 className="text-xl">{employer.subtitle}</h2>
+            <h1 className="text-[40px] text-[60px] mb-6">Applicant Services</h1>
+            <h2 className="text-xl mb-6">
+              Looking to boost your chances of landing your dream job?
+            </h2>
+            <h2 className="text-xl">
+              We offer a suite of applicant services designed to equip you with
+              the tools and guidance you need to stand out in the job market.
+            </h2>
           </FadeInSection>
         </div>
         <Container>
           <div className="flex flex-col justify-center items-center">
-            {employer.parts.map((part, index) => (
+            {applicant.parts.map((part, index) => (
               <div className="flex flex-col w-full lg:w-1/2" key={index}>
                 <FadeInSection key={index}>
                   <h2 className="text-2xl mb-4 font-black">{part.title}</h2>
