@@ -150,7 +150,7 @@ export default function Index({ preview, allPosts }) {
           </FadeInSection>
         </Container>
       </Layout>
-      <Cursor />
+      {isMobile() ? null : <Cursor />}
     </>
   );
 }

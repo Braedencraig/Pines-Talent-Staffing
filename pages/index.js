@@ -155,7 +155,7 @@ export default function Index({ preview, allPosts }) {
           <FadeInSection key={5}>
             <ContactForm />
           </FadeInSection>
-          <FadeInSection key={6}>
+          {isMobile() ? (
             <div className="flex mt-16 mb-16 lg:flex-row flex-col">
               <figure class="item">
                 <div style={{ "--img": "url(/assets/img1.jpg)" }}></div>
@@ -188,7 +188,76 @@ export default function Index({ preview, allPosts }) {
                 </figcaption>
               </figure>
             </div>
-          </FadeInSection>
+          ) : (
+            <FadeInSection key={6}>
+              <div className="flex mt-16 mb-16 lg:flex-row flex-col">
+                <figure class="item">
+                  <div style={{ "--img": "url(/assets/img1.jpg)" }}></div>
+                  <div
+                    class="item__cover"
+                    style={{ "background-image": "url(/assets/img1.jpg)" }}
+                  ></div>
+                  <figcaption class="item__content">
+                    <h3 class="item__content-title">Marketing & Creative</h3>
+                  </figcaption>
+                </figure>
+                <figure class="item">
+                  <div style={{ "--img": "url(/assets/img2.jpg)" }}></div>
+                  <div
+                    class="item__cover"
+                    style={{ "background-image": "url(/assets/img2.jpg)" }}
+                  ></div>
+                  <figcaption class="item__content">
+                    <h3 class="item__content-title">Food & Beverage</h3>
+                  </figcaption>
+                </figure>
+                <figure class="item">
+                  <div style={{ "--img": "url(/assets/img3.jpg)" }}></div>
+                  <div
+                    class="item__cover"
+                    style={{ "background-image": "url(/assets/img3.jpg)" }}
+                  ></div>
+                  <figcaption class="item__content">
+                    <h3 class="item__content-title"> VFX & Post Production</h3>
+                  </figcaption>
+                </figure>
+              </div>
+            </FadeInSection>
+          )}
+          {/* <FadeInSection key={6}>
+            <div className="flex mt-16 mb-16 lg:flex-row flex-col">
+              <figure class="item">
+                <div style={{ "--img": "url(/assets/img1.jpg)" }}></div>
+                <div
+                  class="item__cover"
+                  style={{ "background-image": "url(/assets/img1.jpg)" }}
+                ></div>
+                <figcaption class="item__content">
+                  <h3 class="item__content-title">Marketing & Creative</h3>
+                </figcaption>
+              </figure>
+              <figure class="item">
+                <div style={{ "--img": "url(/assets/img2.jpg)" }}></div>
+                <div
+                  class="item__cover"
+                  style={{ "background-image": "url(/assets/img2.jpg)" }}
+                ></div>
+                <figcaption class="item__content">
+                  <h3 class="item__content-title">Food & Beverage</h3>
+                </figcaption>
+              </figure>
+              <figure class="item">
+                <div style={{ "--img": "url(/assets/img3.jpg)" }}></div>
+                <div
+                  class="item__cover"
+                  style={{ "background-image": "url(/assets/img3.jpg)" }}
+                ></div>
+                <figcaption class="item__content">
+                  <h3 class="item__content-title"> VFX & Post Production</h3>
+                </figcaption>
+              </figure>
+            </div>
+          </FadeInSection> */}
 
           {/* <div class="content">
             <FadeInSection key={5}>
@@ -275,7 +344,7 @@ export default function Index({ preview, allPosts }) {
           </div> */}
         </Container>
       </Layout>
-      <Cursor />
+      {isMobile() ? null : <Cursor />}
     </>
   );
 }

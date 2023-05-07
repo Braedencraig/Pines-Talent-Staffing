@@ -160,7 +160,7 @@ export default function Index({ preview, allPosts }) {
           </div>
         </div>
       </Layout>
-      <Cursor />
+      {isMobile() ? null : <Cursor />}
     </>
   );
 }
