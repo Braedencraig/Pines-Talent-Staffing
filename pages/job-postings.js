@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import Container from "../components/container";
 import Layout from "../components/layout";
-import { getAllPostsForHome } from "../lib/api";
+import { getAllPostsForHome, getAllJobs } from "../lib/api";
 import Head from "next/head";
 import data from "../data.json";
 import classNames from "classnames";
 import FadeInSection from "../components/fadein";
 import ContactForm from "../components/contactform";
 
-export default function Index({ preview, allPosts }) {
+export default function Index({ preview, allPosts, allJobs }) {
   const { job } = data;
+  console.log(allJobs);
 
   const isMobile = () => {
     const ua = navigator.userAgent;
@@ -105,15 +106,29 @@ export default function Index({ preview, allPosts }) {
         <Head>
           <title>{`Job Postings | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero-job mt-0 lg:mt-[72px]">
+        <div className="hero-job mt-[40px] sm:mt-0 lg:mt-[72px]">
           <div className="flex flex-col text-center bg-white text-black">
             <FadeInSection key={1}>
-              <h1 className="text-[40px] text-[60px]">{job.title}</h1>
+              <h1 className="text-[40px] lg:text-[60px]">{job.title}</h1>
               <h2 className="text-2xl">{job.subtitle}</h2>
             </FadeInSection>
           </div>
         </div>
-        <Container>asdas</Container>
+        <Container>
+          <div className="flex flex-col lg:flex-row flex-wrap pb-[72px] lg:pb-[210px]">
+            <FadeInSection key={2}>
+              {allJobs.length > 0 &&
+                allJobs.map((job) => {
+                  return (
+                    <div className="card card-4 w-full lg:w-[30%] text-black bg-black m-2">
+                      <p>{job.title}</p>
+                      <p>{job.subtitle}</p>
+                    </div>
+                  );
+                })}
+            </FadeInSection>
+          </div>
+        </Container>
       </Layout>
       <Cursor />
     </>
@@ -122,7 +137,8 @@ export default function Index({ preview, allPosts }) {
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
+  const allJobs = (await getAllJobs(preview)) ?? [];
   return {
-    props: { preview, allPosts },
+    props: { preview, allPosts, allJobs },
   };
 }
