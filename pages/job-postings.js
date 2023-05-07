@@ -129,20 +129,23 @@ export default function Index({ preview, allPosts, allJobs }) {
             </FadeInSection>
           </div>
           <div>
-            <h2 className="text-2xl text-center mb-6">{job.form.title}</h2>
-            <p className="text-center text-lg mb-4">{job.form.sub}</p>
-            <p className="text-center text-lg mb-4">{job.form.sub2}</p>
-            <div className="w-full m-auto flex justify-center mb-16 mt-6">
-              <Link
-                href="/contact"
-                className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
-              >
-                Contact
-              </Link>
-            </div>
+            <FadeInSection key={3}>
+              <h2 className="text-2xl text-center mb-6">{job.form.title}</h2>
+              <p className="text-center text-lg mb-4">{job.form.sub}</p>
+              <p className="text-center text-lg mb-4">{job.form.sub2}</p>
+              <div className="w-full m-auto flex justify-center mb-16 mt-6">
+                <Link
+                  href="/contact"
+                  className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+                >
+                  Contact
+                </Link>
+              </div>
+            </FadeInSection>
           </div>
-
-          <JobForm jobs={allJobs} />
+          <FadeInSection key={4}>
+            <JobForm jobs={allJobs} />
+          </FadeInSection>
         </Container>
       </Layout>
       <Cursor />
