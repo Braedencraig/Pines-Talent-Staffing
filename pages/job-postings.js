@@ -4,13 +4,13 @@ import Layout from "../components/layout";
 import { getAllPostsForHome, getAllJobs } from "../lib/api";
 import Head from "next/head";
 import data from "../data.json";
+import Link from "next/link";
 import classNames from "classnames";
 import FadeInSection from "../components/fadein";
-import ContactForm from "../components/contactform";
+import JobForm from "../components/jobform";
 
 export default function Index({ preview, allPosts, allJobs }) {
   const { job } = data;
-  console.log(allJobs);
 
   const isMobile = () => {
     const ua = navigator.userAgent;
@@ -115,12 +115,12 @@ export default function Index({ preview, allPosts, allJobs }) {
           </div>
         </div>
         <Container>
-          <div className="flex flex-col lg:flex-row flex-wrap pb-[72px] lg:pb-[210px]">
+          <div className="flex flex-col lg:flex-row flex-wrap mb-20">
             <FadeInSection key={2}>
               {allJobs.length > 0 &&
                 allJobs.map((job) => {
                   return (
-                    <div className="card card-4 w-full lg:w-[30%] text-black bg-black m-2">
+                    <div className="card card-4 w-full lg:w-[32%] text-black bg-black m-2">
                       <p>{job.title}</p>
                       <p>{job.subtitle}</p>
                     </div>
@@ -128,6 +128,21 @@ export default function Index({ preview, allPosts, allJobs }) {
                 })}
             </FadeInSection>
           </div>
+          <div>
+            <h2 className="text-2xl text-center mb-6">{job.form.title}</h2>
+            <p className="text-center text-lg mb-4">{job.form.sub}</p>
+            <p className="text-center text-lg mb-4">{job.form.sub2}</p>
+            <div className="w-full m-auto flex justify-center mb-16 mt-6">
+              <Link
+                href="/contact"
+                className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          <JobForm jobs={allJobs} />
         </Container>
       </Layout>
       <Cursor />

@@ -27,7 +27,12 @@
   },
   "job": {
     "title": "Job Postings",
-    "subtitle": "The next step in your career"
+    "subtitle": "The next step in your career",
+    "form": {
+      "title": "Apply",
+      "sub": "Find Your Dream Job",
+      "sub2": "If you would like to make a general application please feel free to contact us directly."
+    }
   },
   "employer": {
     "title": "Employer Services",
