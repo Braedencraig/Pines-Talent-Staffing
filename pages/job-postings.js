@@ -106,7 +106,7 @@ export default function Index({ preview, allPosts, allJobs }) {
         <Head>
           <title>{`Job Postings | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero-job mt-[60px] sm:mt-[60px] lg:mt-[72px] getintouch">
+        <div className="hero-job mt-[120px] sm:mt-[60px] lg:mt-[72px] getintouch">
           <div className="flex flex-col text-center bg-white text-black">
             {/* <FadeInSection key={1}> */}
             <h1 className="text-[30px] lg:text-[60px]">
