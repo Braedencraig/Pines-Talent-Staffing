@@ -108,48 +108,48 @@ export default function Index({ preview, allPosts, allJobs }) {
         </Head>
         <div className="hero-job mt-[60px] sm:mt-[60px] lg:mt-[72px] getintouch">
           <div className="flex flex-col text-center bg-white text-black">
-            <FadeInSection key={1}>
-              <h1 className="text-[30px] lg:text-[60px]">
-                {job.title.toUpperCase()}
-              </h1>
-              <h2 className="text-2xl">{job.subtitle}</h2>
-            </FadeInSection>
+            {/* <FadeInSection key={1}> */}
+            <h1 className="text-[30px] lg:text-[60px]">
+              {job.title.toUpperCase()}
+            </h1>
+            <h2 className="text-2xl">{job.subtitle}</h2>
+            {/* </FadeInSection> */}
           </div>
         </div>
         <Container>
           <div className="flex flex-col lg:flex-row flex-wrap mb-20">
-            <FadeInSection key={2}>
-              {allJobs.length > 0 &&
-                allJobs.map((job) => {
-                  return (
-                    <div className="card card-4 w-full lg:w-[32%] text-black bg-black m-2">
-                      <p>{job.title}</p>
-                      <p>{job.subtitle}</p>
-                    </div>
-                  );
-                })}
-            </FadeInSection>
+            {/* <FadeInSection key={2}> */}
+            {allJobs.length > 0 &&
+              allJobs.map((job) => {
+                return (
+                  <div className="card card-4 w-full lg:w-[32%] text-black bg-black m-2">
+                    <p>{job.title}</p>
+                    <p>{job.subtitle}</p>
+                  </div>
+                );
+              })}
+            {/* </FadeInSection> */}
           </div>
           <div>
-            <FadeInSection key={3}>
-              <h2 className="text-2xl text-center mb-6">
-                {job.form.title.toUpperCase()}
-              </h2>
-              <p className="text-center text-lg mb-4">{job.form.sub}</p>
-              <p className="text-center text-lg mb-4">{job.form.sub2}</p>
-              <div className="w-full m-auto flex justify-center mb-16 mt-6">
-                <Link
-                  href="/contact"
-                  className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
-                >
-                  Contact
-                </Link>
-              </div>
-            </FadeInSection>
+            {/* <FadeInSection key={3}> */}
+            <h2 className="text-2xl text-center mb-6">
+              {job.form.title.toUpperCase()}
+            </h2>
+            <p className="text-center text-lg mb-4">{job.form.sub}</p>
+            <p className="text-center text-lg mb-4">{job.form.sub2}</p>
+            <div className="w-full m-auto flex justify-center mb-16 mt-6">
+              <Link
+                href="/contact"
+                className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+              >
+                Contact
+              </Link>
+            </div>
+            {/* </FadeInSection> */}
           </div>
-          <FadeInSection key={4}>
-            <JobForm jobs={allJobs} />
-          </FadeInSection>
+          {/* <FadeInSection key={4}> */}
+          <JobForm jobs={allJobs} />
+          {/* </FadeInSection> */}
         </Container>
       </Layout>
       {typeof navigator !== "undefined" && isMobile() ? null : <Cursor />}

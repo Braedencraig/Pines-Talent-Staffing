@@ -118,42 +118,42 @@ export default function Index({ preview, allPosts }) {
                   <h1 className="text-[30px] lg:text-[60px] mb-12 mt-12 lg:mt-0">
                     BUILDING BETTER TEAMS
                   </h1>
-                  <FadeInSection key={1}>
-                    <p className="mb-12">
-                      At Pines Talent, we understand that finding the right
-                      talent is crucial to the success of your business and the
-                      productivity of your teams. With a particular focus on
-                      marketing, creative, and technology placements, we offer
-                      tailored staffing services that support our
-                      industry-leading clients secure top talent in their
-                      markets. We pride ourselves on taking a people-first
-                      approach to staffing. That’s why we take the time to
-                      discover the unique needs of each of our clients and
-                      strive to build long-lasting partnerships based on trust
-                      and transparency. Our services are designed to both
-                      support, or work in lieu of, your internal Talent
-                      Acquisition teams and streamline your hiring process.{" "}
-                    </p>
-                    <p className="mb-12">
-                      Our extensive network of industry professionals,
-                      multi-prong vetting process, and candidate pre-screening,
-                      allows us to connect clients with the right talent quickly
-                      and efficiently. We take the time to get to know each
-                      individual, their career goals, and their unique skill
-                      set. This allows us to provide personalized, tailored
-                      services that meet the specific needs of each client and
-                      candidate. Whether you're a company looking for the right
-                      candidate to join your team, or a professional searching
-                      for your next career opportunity, we're here to help.
-                    </p>
-                    <Link
-                      href="/contact"
-                      type="submit"
-                      className="bg-black text-white px-4 py-2 w-full md:w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
-                    >
-                      Contact
-                    </Link>
-                  </FadeInSection>
+                  {/* <FadeInSection key={1}> */}
+                  <p className="mb-12">
+                    At Pines Talent, we understand that finding the right talent
+                    is crucial to the success of your business and the
+                    productivity of your teams. With a particular focus on
+                    marketing, creative, and technology placements, we offer
+                    tailored staffing services that support our industry-leading
+                    clients secure top talent in their markets. We pride
+                    ourselves on taking a people-first approach to staffing.
+                    That’s why we take the time to discover the unique needs of
+                    each of our clients and strive to build long-lasting
+                    partnerships based on trust and transparency. Our services
+                    are designed to both support, or work in lieu of, your
+                    internal Talent Acquisition teams and streamline your hiring
+                    process.{" "}
+                  </p>
+                  <p className="mb-12">
+                    Our extensive network of industry professionals, multi-prong
+                    vetting process, and candidate pre-screening, allows us to
+                    connect clients with the right talent quickly and
+                    efficiently. We take the time to get to know each
+                    individual, their career goals, and their unique skill set.
+                    This allows us to provide personalized, tailored services
+                    that meet the specific needs of each client and candidate.
+                    Whether you're a company looking for the right candidate to
+                    join your team, or a professional searching for your next
+                    career opportunity, we're here to help.
+                  </p>
+                  <Link
+                    href="/contact"
+                    type="submit"
+                    className="bg-black text-white px-4 py-2 w-full md:w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+                  >
+                    Contact
+                  </Link>
+                  {/* </FadeInSection> */}
                 </div>
               </div>
             </Container>

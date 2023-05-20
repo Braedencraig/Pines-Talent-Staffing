@@ -106,7 +106,7 @@ function JobForm({ jobs }) {
         </div>
       </div>
       <div className="mb-6 flex w-full justify-between max-w-[800px] m-auto flex-col sm:flex-row">
-        <div className="flex flex-col w-full sm:w-[50%] mr-2 mb-6 sm:mb-6">
+        <div className="flex flex-col w-full sm:w-[50%] mr-2 mb-6 sm:mb-0">
           <select
             className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-black bg-white h-[42px]"
             id="position"
@@ -135,7 +135,9 @@ function JobForm({ jobs }) {
       </div>
       <div className="mb-6 flex w-full justify-between max-w-[800px] m-auto flex-col sm:flex-row">
         <div className="flex flex-col w-full sm:w-[50%] mr-2 mb-4 sm:mb-0">
-          <label htmlFor="startDate">Available Start Date:</label>
+          <label className="font-bold" htmlFor="startDate">
+            Available Start Date
+          </label>
           <input
             type="date"
             id="startDate"
@@ -144,7 +146,9 @@ function JobForm({ jobs }) {
           />
         </div>
         <div className="flex flex-col w-full sm:w-[50%] mr-2 mb-4 sm:mb-0">
-          <label htmlFor="linkedin">LinkedIn Profile Link:</label>
+          <label className="font-bold" htmlFor="linkedin">
+            LinkedIn Profile Link
+          </label>
           <input
             className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-black bg-white"
             type="url"

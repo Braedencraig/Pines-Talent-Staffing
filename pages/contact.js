@@ -108,25 +108,25 @@ export default function Index({ preview, allPosts }) {
         </Head>
         <div className="mt-[40px] lg:mt-[72px]">
           <div className="flex flex-col text-center bg-white text-black pt-28 lg:pt-20 mb-8">
-            <FadeInSection key={1}>
-              <h1 className="text-[30px] lg:text-[60px]">Contact Us</h1>
-            </FadeInSection>
+            {/* <FadeInSection key={1}> */}
+            <h1 className="text-[30px] lg:text-[60px]">Contact Us</h1>
+            {/* </FadeInSection> */}
           </div>
         </div>
         <Container>
-          <FadeInSection
-            classNames="flex flex-col justify-center items-center text-center mt-4 mb-8"
+          <div
+            className="flex flex-col justify-center items-center text-center mt-4 mb-8"
             key={3}
           >
             {/* <div className="flex flex-col justify-center items-center text-center mt-4 pb-8"> */}
             <ContactGeneral />
             {/* </div> */}
-          </FadeInSection>
+          </div>
         </Container>
         <div className="min-h-[33vh]">
-          <FadeInSection key={2}>
-            <Map />
-          </FadeInSection>
+          {/* <FadeInSection key={2}> */}
+          <Map />
+          {/* </FadeInSection> */}
         </div>
       </Layout>
       {typeof navigator !== "undefined" && isMobile() ? null : <Cursor />}

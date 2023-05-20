@@ -107,15 +107,15 @@ export default function Index({ preview, allPosts }) {
         </Head>
         <div className="hero mt-0 lg:mt-[72px]">
           <div className="flex flex-col text-center text-white">
-            <FadeInSection key={1}>
-              <h1 className="text-[60px] lg:text-[100px]">{hero.title}</h1>
-              <h2 className="text-2xl lg:text-5xl">{hero.subtitle}</h2>
-            </FadeInSection>
+            {/* <FadeInSection key={1}> */}
+            <h1 className="text-[60px] lg:text-[100px]">{hero.title}</h1>
+            <h2 className="text-2xl lg:text-5xl">{hero.subtitle}</h2>
+            {/* </FadeInSection> */}
           </div>
         </div>
         <Container>
-          <FadeInSection
-            classNames="flex flex-col justify-center items-center text-center mt-20"
+          <div
+            className="flex flex-col justify-center items-center text-center mt-20"
             key={2}
           >
             <h3 className="text-4xl mb-6">PEOPLE FIRST APPROACH TO STAFFING</h3>
@@ -123,9 +123,9 @@ export default function Index({ preview, allPosts }) {
               At Pines Talent, we believe that people are at the heart of every
               successful business.
             </h4>
-          </FadeInSection>
-          <FadeInSection
-            classNames="flex flex-col justify-center items-center text-center mb-20 max-w-[900px] m-auto text-xl"
+          </div>
+          <div
+            className="flex flex-col justify-center items-center text-center mb-20 max-w-[900px] m-auto text-xl"
             key={3}
           >
             <p className="mb-6">
@@ -140,9 +140,9 @@ export default function Index({ preview, allPosts }) {
               Take a look at our features and let us take the pressure off your
               search.
             </p>
-          </FadeInSection>
-          <FadeInSection
-            classNames="flex flex-col justify-center items-center text-center"
+          </div>
+          <div
+            className="flex flex-col justify-center items-center text-center"
             key={4}
           >
             <h4 className="text-3xl mb-4">REQUEST TALENT</h4>
@@ -151,10 +151,10 @@ export default function Index({ preview, allPosts }) {
               you are seeking to fill. We encourage users to fill out all
               sections before submitting their information.
             </h4>
-          </FadeInSection>
-          <FadeInSection key={5}>
-            <ContactForm />
-          </FadeInSection>
+          </div>
+          {/* <FadeInSection key={5}> */}
+          <ContactForm />
+          {/* </FadeInSection> */}
           {typeof navigator !== "undefined" && isMobile() ? (
             <div className="flex mt-16 mb-16 lg:flex-row flex-col">
               <figure class="item">
@@ -189,40 +189,40 @@ export default function Index({ preview, allPosts }) {
               </figure>
             </div>
           ) : (
-            <FadeInSection key={6}>
-              <div className="flex mt-16 mb-16 lg:flex-row flex-col">
-                <figure class="item">
-                  <div style={{ "--img": "url(/assets/img1.jpg)" }}></div>
-                  <div
-                    class="item__cover"
-                    style={{ "background-image": "url(/assets/img1.jpg)" }}
-                  ></div>
-                  <figcaption class="item__content">
-                    <h3 class="item__content-title">Marketing & Creative</h3>
-                  </figcaption>
-                </figure>
-                <figure class="item">
-                  <div style={{ "--img": "url(/assets/img2.jpg)" }}></div>
-                  <div
-                    class="item__cover"
-                    style={{ "background-image": "url(/assets/img2.jpg)" }}
-                  ></div>
-                  <figcaption class="item__content">
-                    <h3 class="item__content-title">Food & Beverage</h3>
-                  </figcaption>
-                </figure>
-                <figure class="item">
-                  <div style={{ "--img": "url(/assets/img3.jpg)" }}></div>
-                  <div
-                    class="item__cover"
-                    style={{ "background-image": "url(/assets/img3.jpg)" }}
-                  ></div>
-                  <figcaption class="item__content">
-                    <h3 class="item__content-title"> VFX & Post Production</h3>
-                  </figcaption>
-                </figure>
-              </div>
-            </FadeInSection>
+            // <FadeInSection key={6}>
+            <div className="flex mt-16 mb-16 lg:flex-row flex-col">
+              <figure class="item">
+                <div style={{ "--img": "url(/assets/img1.jpg)" }}></div>
+                <div
+                  class="item__cover"
+                  style={{ "background-image": "url(/assets/img1.jpg)" }}
+                ></div>
+                <figcaption class="item__content">
+                  <h3 class="item__content-title">Marketing & Creative</h3>
+                </figcaption>
+              </figure>
+              <figure class="item">
+                <div style={{ "--img": "url(/assets/img2.jpg)" }}></div>
+                <div
+                  class="item__cover"
+                  style={{ "background-image": "url(/assets/img2.jpg)" }}
+                ></div>
+                <figcaption class="item__content">
+                  <h3 class="item__content-title">Food & Beverage</h3>
+                </figcaption>
+              </figure>
+              <figure class="item">
+                <div style={{ "--img": "url(/assets/img3.jpg)" }}></div>
+                <div
+                  class="item__cover"
+                  style={{ "background-image": "url(/assets/img3.jpg)" }}
+                ></div>
+                <figcaption class="item__content">
+                  <h3 class="item__content-title"> VFX & Post Production</h3>
+                </figcaption>
+              </figure>
+            </div>
+            // </FadeInSection>
           )}
           {/* <FadeInSection key={6}>
             <div className="flex mt-16 mb-16 lg:flex-row flex-col">
