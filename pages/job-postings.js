@@ -106,10 +106,12 @@ export default function Index({ preview, allPosts, allJobs }) {
         <Head>
           <title>{`Job Postings | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero-job mt-[40px] sm:mt-0 lg:mt-[72px]">
+        <div className="hero-job mt-[60px] sm:mt-[60px] lg:mt-[72px] getintouch">
           <div className="flex flex-col text-center bg-white text-black">
             <FadeInSection key={1}>
-              <h1 className="text-[40px] lg:text-[60px]">{job.title}</h1>
+              <h1 className="text-[30px] lg:text-[60px]">
+                {job.title.toUpperCase()}
+              </h1>
               <h2 className="text-2xl">{job.subtitle}</h2>
             </FadeInSection>
           </div>
@@ -130,7 +132,9 @@ export default function Index({ preview, allPosts, allJobs }) {
           </div>
           <div>
             <FadeInSection key={3}>
-              <h2 className="text-2xl text-center mb-6">{job.form.title}</h2>
+              <h2 className="text-2xl text-center mb-6">
+                {job.form.title.toUpperCase()}
+              </h2>
               <p className="text-center text-lg mb-4">{job.form.sub}</p>
               <p className="text-center text-lg mb-4">{job.form.sub2}</p>
               <div className="w-full m-auto flex justify-center mb-16 mt-6">
@@ -148,7 +152,7 @@ export default function Index({ preview, allPosts, allJobs }) {
           </FadeInSection>
         </Container>
       </Layout>
-      {isMobile() ? null : <Cursor />}
+      {typeof navigator !== "undefined" && isMobile() ? null : <Cursor />}
     </>
   );
 }

@@ -106,7 +106,7 @@ function JobForm({ jobs }) {
         </div>
       </div>
       <div className="mb-6 flex w-full justify-between max-w-[800px] m-auto flex-col sm:flex-row">
-        <div className="flex flex-col w-full sm:w-[50%] mr-2 mb-4 sm:mb-0">
+        <div className="flex flex-col w-full sm:w-[50%] mr-2 mb-6 sm:mb-6">
           <select
             className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-black bg-white h-[42px]"
             id="position"
@@ -156,7 +156,7 @@ function JobForm({ jobs }) {
       <div className="w-full m-auto flex justify-center mb-20">
         <button
           type="submit"
-          className="bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+          className="bg-black text-white px-4 py-2 w-full md:w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
         >
           Apply Now
         </button>

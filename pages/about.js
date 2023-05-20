@@ -103,22 +103,22 @@ export default function Index({ preview, allPosts }) {
         <Head>
           <title>{`About | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="mt-0 lg:mt-[72px] mb-[72px] min-h-[75vh]">
-          <div className="flex flex-col text-center text-black mt-40">
-            <FadeInSection key={1}>
-              <Container>
-                <div className="flex flex-col lg:flex-row w-full m-auto justify-between">
-                  <div className="w-[100%] lg:w-[45%]">
-                    <img
-                      className="h-[100%] object-cover"
-                      src={"/assets/about.jpg"}
-                      alt="Puzzle Pieces"
-                    />
-                  </div>
-                  <div className="w-[100%] lg:w-[45%]">
-                    <h1 className="text-[40px] lg:text-[60px] mb-12 mt-12 lg:mt-0">
-                      Building Better Teams
-                    </h1>
+        <div className="mt-0 lg:mt-[72px] pb-[72px] min-h-[100vh]">
+          <div className="flex flex-col text-center text-black pt-40">
+            <Container>
+              <div className="flex flex-col lg:flex-row w-full m-auto justify-between">
+                <div className="w-[100%] lg:w-[45%]">
+                  <img
+                    className="h-[100%] object-cover"
+                    src={"/assets/about.jpg"}
+                    alt="Puzzle Pieces"
+                  />
+                </div>
+                <div className="w-[100%] lg:w-[45%]">
+                  <h1 className="text-[30px] lg:text-[60px] mb-12 mt-12 lg:mt-0">
+                    BUILDING BETTER TEAMS
+                  </h1>
+                  <FadeInSection key={1}>
                     <p className="mb-12">
                       At Pines Talent, we understand that finding the right
                       talent is crucial to the success of your business and the
@@ -149,18 +149,18 @@ export default function Index({ preview, allPosts }) {
                     <Link
                       href="/contact"
                       type="submit"
-                      className="bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+                      className="bg-black text-white px-4 py-2 w-full md:w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
                     >
                       Contact
                     </Link>
-                  </div>
+                  </FadeInSection>
                 </div>
-              </Container>
-            </FadeInSection>
+              </div>
+            </Container>
           </div>
         </div>
       </Layout>
-      {isMobile() ? null : <Cursor />}
+      {typeof navigator !== "undefined" && isMobile() ? null : <Cursor />}
     </>
   );
 }

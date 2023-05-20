@@ -118,7 +118,7 @@ export default function Index({ preview, allPosts }) {
             classNames="flex flex-col justify-center items-center text-center mt-20"
             key={2}
           >
-            <h3 className="text-4xl mb-6">People First Approach to Staffing</h3>
+            <h3 className="text-4xl mb-6">PEOPLE FIRST APPROACH TO STAFFING</h3>
             <h4 className="text-2xl mb-12">
               At Pines Talent, we believe that people are at the heart of every
               successful business.
@@ -155,7 +155,7 @@ export default function Index({ preview, allPosts }) {
           <FadeInSection key={5}>
             <ContactForm />
           </FadeInSection>
-          {isMobile() ? (
+          {typeof navigator !== "undefined" && isMobile() ? (
             <div className="flex mt-16 mb-16 lg:flex-row flex-col">
               <figure class="item">
                 <div style={{ "--img": "url(/assets/img1.jpg)" }}></div>
@@ -344,7 +344,7 @@ export default function Index({ preview, allPosts }) {
           </div> */}
         </Container>
       </Layout>
-      {isMobile() ? null : <Cursor />}
+      {typeof navigator !== "undefined" && isMobile() ? null : <Cursor />}
     </>
   );
 }

@@ -52,8 +52,8 @@ export default function ContactForm() {
           <span className="text-[#a1c4a3]">This field is required</span>
         )}
       </div>
-      <div className="mb-6 flex w-full">
-        <div className="flex flex-col w-[50%]">
+      <div className="mb-6 flex w-full flex-col md:flex-row">
+        <div className="flex flex-col w-full mb-6 md:mb-0 md:w-[50%]">
           <label htmlFor="email" className="block font-bold mb-2 text-black">
             Email
           </label>
@@ -71,7 +71,7 @@ export default function ContactForm() {
             <span className="text-[#a1c4a3]">This field is required</span>
           )}
         </div>
-        <div className="flex flex-col w-[50%]">
+        <div className="flex flex-col  w-full md:w-[50%]">
           <label htmlFor="phone" className="block font-bold mb-2 text-black">
             Phone
           </label>
@@ -83,7 +83,7 @@ export default function ContactForm() {
               setFormValues({ ...formValues, phone: e.target.value })
             }
             id="phone"
-            className="px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 ml-2 text-black bg-white"
+            className="px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 md:ml-2 text-black bg-white"
           />
           {errors.phone && (
             <span className="text-[#a1c4a3]">This field is required</span>
@@ -114,7 +114,7 @@ export default function ContactForm() {
       <div className="w-full m-auto flex justify-center">
         <button
           type="submit"
-          className="bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+          className="bg-black text-white px-4 py-2 w-full md:w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
         >
           Submit
         </button>

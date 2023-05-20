@@ -106,10 +106,10 @@ export default function Index({ preview, allPosts }) {
         <Head>
           <title>{`Home | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="mt-0 lg:mt-[72px]">
+        <div className="mt-[40px] lg:mt-[72px]">
           <div className="flex flex-col text-center bg-white text-black pt-28 lg:pt-20 mb-8">
             <FadeInSection key={1}>
-              <h1 className="text-[40px] lg:text-[60px]">Contact Us</h1>
+              <h1 className="text-[30px] lg:text-[60px]">Contact Us</h1>
             </FadeInSection>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function Index({ preview, allPosts }) {
           </FadeInSection>
         </div>
       </Layout>
-      {isMobile() ? null : <Cursor />}
+      {typeof navigator !== "undefined" && isMobile() ? null : <Cursor />}
     </>
   );
 }

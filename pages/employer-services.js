@@ -108,19 +108,19 @@ export default function Index({ preview, allPosts }) {
         <Head>
           <title>{`Employeer Services | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero-job mt-[100px] lg:mt-[72px]">
+        <div className="hero-job2 hero-job mt-[180px] lg:mt-[72px]">
           <FadeInSection
             classNames="flex flex-col bg-white text-black w-full services lg:w-1/2 max-w-[748px]"
             key={1}
           >
-            <h1 className="text-[40px] lg:text-[60px] mb-12 font-bold">
+            <h1 className="text-[30px] lg:text-[60px] mb-12 font-bold">
               {employer.title}
             </h1>
             <h2 className="text-xl">{employer.subtitle}</h2>
           </FadeInSection>
         </div>
         <Container>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center md:pt-0 pt-20">
             {employer.parts.map((part, index) => (
               <div
                 className="flex flex-col w-full services lg:w-1/2"
@@ -135,7 +135,7 @@ export default function Index({ preview, allPosts }) {
           </div>
           <FadeInSection key={12}>
             <div>
-              <h1 className="text-[22px] lg:text-[30px] my-8 text-center">
+              <h1 className="text-[18px] lg:text-[30px] my-8 text-center">
                 Request Your Free Consultation Today
               </h1>
             </div>
@@ -150,7 +150,7 @@ export default function Index({ preview, allPosts }) {
           </FadeInSection>
         </Container>
       </Layout>
-      {isMobile() ? null : <Cursor />}
+      {typeof navigator !== "undefined" && isMobile() ? null : <Cursor />}
     </>
   );
 }
