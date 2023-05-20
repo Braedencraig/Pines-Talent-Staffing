@@ -34,6 +34,13 @@ const MobileNav = ({ open, navItems }) => {
       <animated.nav style={{ opacity }} className="mobile-nav">
         <div className="content-wrapper">
           <animated.ul style={{ transform: transformMain }} className="list">
+            <Link
+              href={"/"}
+              className="list-item hover:text-accent-1"
+              key={123}
+            >
+              Home
+            </Link>
             {navItems.map((item) => (
               <Link
                 href={item.link}
