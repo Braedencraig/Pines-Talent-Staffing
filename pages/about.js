@@ -109,7 +109,7 @@ export default function Index({ preview, allPosts }) {
               <div className="flex flex-col lg:flex-row w-full m-auto justify-between">
                 <div className="w-[100%] lg:w-[45%]">
                   <img
-                    className="h-[100%] object-cover"
+                    className="h-[200px] md:h-[100%] object-cover"
                     src={"/assets/about.jpg"}
                     alt="Puzzle Pieces"
                   />
