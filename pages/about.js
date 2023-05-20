@@ -149,7 +149,7 @@ export default function Index({ preview, allPosts }) {
                   <Link
                     href="/contact"
                     type="submit"
-                    className="bg-black text-white px-4 py-2 w-full md:w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+                    className="bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
                   >
                     Contact
                   </Link>
