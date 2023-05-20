@@ -142,7 +142,7 @@ function JobForm({ jobs }) {
             type="date"
             id="startDate"
             {...register("startDate", { required: true })}
-            className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-black bg-white"
+            className="w-full px-3 py-2 border border-gray-400  focus:outline-none focus:border-white-500 text-black bg-white h-[42px]"
           />
         </div>
         <div className="flex flex-col w-full sm:w-[50%] mr-2 mb-4 sm:mb-0">

@@ -1105,14 +1105,12 @@ blockquote {
     display: none;
   }
 
-  input {
+  input, textarea, select {
     -webkit-appearance: none;
     box-shadow: none !important;
   }
   :-webkit-autofill {
     color: #fff !important;
   }
-  textarea {
-    -webkit-appearance: none;
-  }
+
 }
