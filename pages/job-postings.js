@@ -106,7 +106,7 @@ export default function Index({ preview, allPosts, allJobs }) {
         <Head>
           <title>{`Job Postings | Pines Talent Staffing & Consulting`}</title>
         </Head>
-        <div className="hero-job mt-[120px] sm:mt-[60px] lg:mt-[72px] getintouch">
+        <div className="hero-job mt-[120px] sm:mt-[60px] lg:mt-[72px]">
           <div className="flex flex-col text-center bg-white text-black">
             {/* <FadeInSection key={1}> */}
             <h1 className="text-[30px] lg:text-[60px]">
@@ -122,7 +122,7 @@ export default function Index({ preview, allPosts, allJobs }) {
             {allJobs.length > 0 &&
               allJobs.map((job) => {
                 return (
-                  <div className="card card-4 w-full lg:w-[32%] text-black bg-black m-2">
+                  <div className="card card-4 w-full lg:w-[32%] text-black bg-black mb-4">
                     <p>{job.title}</p>
                     <p>{job.subtitle}</p>
                   </div>
