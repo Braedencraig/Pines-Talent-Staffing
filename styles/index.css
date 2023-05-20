@@ -1105,6 +1105,14 @@ blockquote {
     display: none;
   }
 
-  input {-webkit-appearance: none; box-shadow: none !important; }
-:-webkit-autofill { color: #fff !important; }
+  input {
+    -webkit-appearance: none;
+    box-shadow: none !important;
+  }
+  :-webkit-autofill {
+    color: #fff !important;
+  }
+  textarea {
+    -webkit-appearance: none;
+  }
 }
