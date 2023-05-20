@@ -1108,6 +1108,7 @@ blockquote {
   input, textarea, select {
     -webkit-appearance: none;
     box-shadow: none !important;
+    border-radius: 0 !important;
   }
   :-webkit-autofill {
     color: #fff !important;
