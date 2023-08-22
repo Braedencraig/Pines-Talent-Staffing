@@ -182,6 +182,14 @@ section {
   background-position: 0 100%;
 }
 
+.link-underline-active {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#a1c4a3, #a1c4a3);
+    background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+
 .hero {
   width: 100%;
   height: 90vh;

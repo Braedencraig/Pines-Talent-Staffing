@@ -3,11 +3,14 @@ import Container from "./container";
 import Link from "next/link";
 import Header from "./header";
 import data from "../data.json";
+import { useRouter } from "next/router";
 
 export default function Navigation() {
   const [active, setActive] = useState(false);
+  const router = useRouter();
+
   useEffect(() => {
-    setActive(window.location.pathname.replace("/", ""));
+    setActive(window.location.pathname);
   }, []);
   const { navItems } = data;
   return (
@@ -25,15 +28,16 @@ export default function Navigation() {
           </div>
           <ul className="flex flex-row py-6">
             {navItems.map((item, i) => {
+              console.log(item.link === active);
               return (
                 <li key={i} className="ml-7">
                   <Link
                     href={item.link}
                     className={`${
                       active === item.link
-                        ? "text-accent-1 font-bold"
+                        ? "text-white font-bold link-underline-active "
                         : "text-white font-bold"
-                    } no-underline duration-200 transition-colors link link-underline link-underline-black hover:text-white text-white`}
+                    } no-underline duration-200 transition-colors link link-underline link-underline-black hover:text-white`}
                   >
                     {item.name}
                   </Link>
@@ -43,14 +47,6 @@ export default function Navigation() {
           </ul>
         </nav>
         <nav className="lg:hidden relative py-3">
-          {/* <div>
-            <Link
-              href="/"
-              className="text-white max-h-[68px] max-w-[67px] absolute left-0 right-0 top-0 bottom-0 m-auto"
-            >
-              *logo here*
-            </Link>
-          </div> */}
           <Header navItems={navItems} />
         </nav>
       </Container>
