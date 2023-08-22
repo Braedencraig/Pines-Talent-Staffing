@@ -10,6 +10,7 @@ import ContactForm from "../components/contactform";
 
 export default function Index({ preview, allPosts }) {
   const { hero } = data;
+  const [submitted, setSubmitted] = useState(false);
 
   const isMobile = () => {
     const ua = navigator.userAgent;
@@ -104,6 +105,13 @@ export default function Index({ preview, allPosts }) {
       <Layout preview={preview}>
         <Head>
           <title>{`Home | Pines Talent Staffing & Consulting`}</title>
+          <link rel="canonical" href="https://www.pinestalent.com"></link>
+          <meta property="og:title" content="Home | Pines Talent"></meta>
+          <meta property="og:url" content="https://www.pinestalent.com"></meta>
+          <meta property="og:site_name" content="Pines Talent"></meta>
+          <meta property="og:type" content="website"></meta>
+          <meta name="twitter:title" content="Home | Pines Talent"></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
         </Head>
         <div className="hero mt-0 lg:mt-[72px]">
           <div className="flex flex-col text-center text-white">
@@ -119,16 +127,31 @@ export default function Index({ preview, allPosts }) {
             key={2}
           >
             <h3 className="text-4xl mb-6">PEOPLE FIRST APPROACH TO STAFFING</h3>
-            <h4 className="text-2xl mb-12">
+            {/* <h4 className="text-2xl mb-12">
               At Pines Talent, we believe that people are at the heart of every
               successful business.
-            </h4>
+            </h4> */}
           </div>
           <div
-            className="flex flex-col justify-center items-center text-center mb-20 max-w-[900px] m-auto text-xl"
+            className="flex flex-col justify-center items-center text-center mb-20 max-w-[700px] m-auto text-xl"
             key={3}
           >
-            <p className="mb-6">
+            <p className="leading-relaxed">
+              Welcome to Pines Talent! We are a passionate and results-driven
+              recruiting agency with a laser focus on Marketing, Creative, and
+              Technology hires. Our people-first approach lies at the core of
+              everything we do. We believe that successful placements aren't
+              just about skills on paper; they're about finding the perfect
+              match that sparks genuine professional connections. With a team of
+              dedicated professionals, we go above and beyond to understand the
+              unique needs and aspirations of both our candidates and clients.
+              By fostering strong candidate and client engagement, we ensure
+              that every step of the recruitment journey is seamless and
+              rewarding. When you partner with us, you'll experience the
+              difference that true collaboration can make – unlocking the
+              potential of your team and business, one perfect fit at a time.
+            </p>
+            {/* <p className="mb-6">
               We work closely with both clients and candidates to ensure that we
               understand their unique needs, values, and goals. With our
               extensive network and personalized approach, we match the right
@@ -139,21 +162,21 @@ export default function Index({ preview, allPosts }) {
               your team, we are here to make the experience quick and simple.
               Take a look at our features and let us take the pressure off your
               search.
-            </p>
+            </p> */}
           </div>
           <div
             className="flex flex-col justify-center items-center text-center"
             key={4}
           >
             <h4 className="text-3xl mb-4">REQUEST TALENT</h4>
-            <h4 className="text-xl max-w-[900px] mb-12">
+            <h4 className="text-xl max-w-[700px] mb-12 leading-relaxed	">
               Talent Request Form. Please add a brief description of the role
               you are seeking to fill. We encourage users to fill out all
               sections before submitting their information.
             </h4>
           </div>
           {/* <FadeInSection key={5}> */}
-          <ContactForm />
+          <ContactForm submitted={submitted} setSubmitted={setSubmitted} />
           {/* </FadeInSection> */}
           {typeof navigator !== "undefined" && isMobile() ? (
             <div className="flex mt-16 mb-16 lg:flex-row flex-col">
@@ -164,17 +187,17 @@ export default function Index({ preview, allPosts }) {
                   style={{ "background-image": "url(/assets/img1.jpg)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title">Marketing & Creative</h3>
+                  <h3 class="item__content-title">Marketing & Sales</h3>
                 </figcaption>
               </figure>
               <figure class="item">
                 <div style={{ "--img": "url(/assets/img2.jpg)" }}></div>
                 <div
                   class="item__cover"
-                  style={{ "background-image": "url(/assets/img2.jpg)" }}
+                  style={{ "background-image": "url(/assets/img2.webp)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title">Food & Beverage</h3>
+                  <h3 class="item__content-title">Technology</h3>
                 </figcaption>
               </figure>
               <figure class="item">
@@ -184,7 +207,7 @@ export default function Index({ preview, allPosts }) {
                   style={{ "background-image": "url(/assets/img3.jpg)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title"> VFX & Post Production</h3>
+                  <h3 class="item__content-title">Creative</h3>
                 </figcaption>
               </figure>
             </div>
@@ -198,17 +221,17 @@ export default function Index({ preview, allPosts }) {
                   style={{ "background-image": "url(/assets/img1.jpg)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title">Marketing & Creative</h3>
+                  <h3 class="item__content-title">Marketing & Sales</h3>
                 </figcaption>
               </figure>
               <figure class="item">
-                <div style={{ "--img": "url(/assets/img2.jpg)" }}></div>
+                <div style={{ "--img": "url(/assets/img2.webp)" }}></div>
                 <div
                   class="item__cover"
-                  style={{ "background-image": "url(/assets/img2.jpg)" }}
+                  style={{ "background-image": "url(/assets/img2.webp)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title">Food & Beverage</h3>
+                  <h3 class="item__content-title">Technology</h3>
                 </figcaption>
               </figure>
               <figure class="item">
@@ -218,7 +241,7 @@ export default function Index({ preview, allPosts }) {
                   style={{ "background-image": "url(/assets/img3.jpg)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title"> VFX & Post Production</h3>
+                  <h3 class="item__content-title">Creative</h3>
                 </figcaption>
               </figure>
             </div>
@@ -233,7 +256,7 @@ export default function Index({ preview, allPosts }) {
                   style={{ "background-image": "url(/assets/img1.jpg)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title">Marketing & Creative</h3>
+                  <h3 class="item__content-title">Marketing & Sales</h3>
                 </figcaption>
               </figure>
               <figure class="item">
@@ -253,7 +276,7 @@ export default function Index({ preview, allPosts }) {
                   style={{ "background-image": "url(/assets/img3.jpg)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title"> VFX & Post Production</h3>
+                  <h3 class="item__content-title">Creative</h3>
                 </figcaption>
               </figure>
             </div>
@@ -283,7 +306,7 @@ export default function Index({ preview, allPosts }) {
                   style={{ "background-image": "url(/assets/img1.jpg)" }}
                 ></div>
                 <figcaption class="item__content">
-                  <h3 class="item__content-title">Marketing & Creative</h3>
+                  <h3 class="item__content-title">Marketing & Sales</h3>
                 </figcaption>
               </figure>
             </FadeInSection>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-function JobForm({ jobs }) {
+function JobForm({ jobs, submitted, setSubmitted }) {
   const positions = jobs.map((job) => job.title);
   const {
     register,
@@ -20,8 +20,26 @@ function JobForm({ jobs }) {
   ];
 
   const onSubmit = (data) => {
-    console.log(data, "data");
+    fetch("/api/job-postings", {
+      method: "POST",
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) setSubmitted(true);
+    });
   };
+
+  if (submitted) {
+    return (
+      <div className="w-full flex flex-col justify-center items-center mb-6">
+        <h2 className="text-2xl text-center mb-4 mt-4 font-black">
+          Thank you for your submission!
+        </h2>
+        <p className="text-center text-lg mb-4">
+          We will be in touch with you shortly.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form className="mt-20" onSubmit={handleSubmit(onSubmit)}>

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({ submitted, setSubmitted }) {
   const [formValues, setFormValues] = useState({});
 
   const {
@@ -11,11 +11,33 @@ export default function ContactForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data, "data");
+    fetch("/api/mail", {
+      method: "POST",
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) setSubmitted(true);
+    });
   };
 
+  if (submitted) {
+    return (
+      <div className="w-full flex flex-col justify-center items-center">
+        <h2 className="text-2xl text-center mb-4 mt-4 font-black">
+          Thank you for your submission!
+        </h2>
+        <p className="text-center text-lg mb-4">
+          We will be in touch with you shortly.
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="max-w-xl mx-auto">
+    <form
+      autoComplete="off"
+      onSubmit={handleSubmit(onSubmit)}
+      className="max-w-xl mx-auto"
+    >
       <div className="mb-6">
         <label htmlFor="firstName" className="block font-bold mb-2 text-black">
           First Name
@@ -114,7 +136,7 @@ export default function ContactForm() {
       <div className="w-full m-auto flex justify-center">
         <button
           type="submit"
-          className="bg-black text-white px-4 py-2 w-full md:w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
+          className="bg-black cursor-none text-white px-4 py-2 w-full md:w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
         >
           Submit
         </button>

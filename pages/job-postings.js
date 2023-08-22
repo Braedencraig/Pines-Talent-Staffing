@@ -11,6 +11,7 @@ import JobForm from "../components/jobform";
 
 export default function Index({ preview, allPosts, allJobs }) {
   const { job } = data;
+  const [submitted, setSubmitted] = useState(false);
 
   const isMobile = () => {
     const ua = navigator.userAgent;
@@ -142,13 +143,17 @@ export default function Index({ preview, allPosts, allJobs }) {
                 href="/contact"
                 className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
               >
-                Contact
+                Contact Us
               </Link>
             </div>
             {/* </FadeInSection> */}
           </div>
           {/* <FadeInSection key={4}> */}
-          <JobForm jobs={allJobs} />
+          <JobForm
+            jobs={allJobs}
+            submitted={submitted}
+            setSubmitted={setSubmitted}
+          />
           {/* </FadeInSection> */}
         </Container>
       </Layout>

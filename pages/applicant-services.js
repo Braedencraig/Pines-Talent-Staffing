@@ -120,7 +120,7 @@ export default function Index({ preview, allPosts }) {
             <h1 className="text-[30px] lg:text-[60px] mb-6 font-bold">
               Applicant Services
             </h1>
-            <h2 className="text-xl mb-6">
+            <h2 className="text-xl mb-6 font-black">
               Looking to boost your chances of landing your dream job?
             </h2>
             <h2 className="text-xl">
@@ -154,7 +154,7 @@ export default function Index({ preview, allPosts }) {
               href="/contact"
               className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
             >
-              Contact
+              Contact Us
             </Link>
           </div>
           {/* </FadeInSection> */}

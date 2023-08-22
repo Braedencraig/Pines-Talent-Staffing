@@ -113,6 +113,7 @@ export default function Index({ preview, allPosts }) {
             <h1 className="text-[30px] lg:text-[60px] mb-12 font-bold">
               {employer.title}
             </h1>
+            <h2 className="text-xl mb-4 font-black">{employer.title1}</h2>
             <h2 className="text-xl">{employer.subtitle}</h2>
           </div>
         </div>
@@ -141,7 +142,7 @@ export default function Index({ preview, allPosts }) {
               href="/contact"
               className="text-center bg-black text-white px-4 py-2 w-[200px] hover:bg-[#a1c4a3] hover:text-black focus:outline-none focus:bg-[#a1c4a3]"
             >
-              Contact
+              Contact Us
             </Link>
           </div>
           {/* </FadeInSection> */}

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="py-4 flex flex-col items-center text-md">
           <p className="mb-2 text-xl">Pines Talent</p>
           <a
-            className="text-white cursor-none"
+            className="text-white cursor-none other"
             href="mailto:darcy@pinestalent.com"
           >
             darcy@pinestalent.com

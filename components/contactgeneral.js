@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 
-export default function ContactGeneral() {
+export default function ContactGeneral({ submitted, setSubmitted }) {
   const [formValues, setFormValues] = useState({});
 
   const {
@@ -11,11 +11,33 @@ export default function ContactGeneral() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data, "data");
+    fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) setSubmitted(true);
+    });
   };
 
+  if (submitted) {
+    return (
+      <div className="w-full flex flex-col justify-center items-center h-[30vh]">
+        <h2 className="text-2xl text-center mb-4 mt-4 font-black">
+          Thank you for your submission!
+        </h2>
+        <p className="text-center text-lg mb-4">
+          We will be in touch with you shortly.
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="max-w-xl mx-auto w-full">
+    <form
+      autoComplete="off"
+      onSubmit={handleSubmit(onSubmit)}
+      className="max-w-xl mx-auto w-full"
+    >
       <div className="mb-6 flex w-full flex-col md:flex-row">
         <div className="flex flex-col w-full md:w-[50%] md:mb-0 mb-6">
           <label

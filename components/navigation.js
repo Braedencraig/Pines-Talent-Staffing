@@ -13,16 +13,17 @@ export default function Navigation() {
   return (
     <div className="absolute top-0 left-0 right-0 bg-black">
       <Container>
-        <nav className="items-start justify-between flex-wrap py-6 hidden lg:flex">
+        <nav className="items-start justify-between flex-wrap hidden lg:flex">
           <div>
             <Link
               href="/"
-              className="flex items-center flex-shrink-0 text-white mr-6 svgfun"
+              className="flex items-center flex-shrink-0 text-white mr-6 svgfun pt-2"
             >
-              *logo here*
+              {/* Pines Talent */}
+              <img src="./assets/navlogo.png" alt="" />
             </Link>
           </div>
-          <ul className="flex flex-row">
+          <ul className="flex flex-row py-6">
             {navItems.map((item, i) => {
               return (
                 <li key={i} className="ml-7">

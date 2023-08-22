@@ -11,6 +11,7 @@ import Map from "../components/map";
 
 export default function Index({ preview, allPosts }) {
   const { hero } = data;
+  const [submitted, setSubmitted] = useState(false);
 
   const isMobile = () => {
     const ua = navigator.userAgent;
@@ -119,13 +120,13 @@ export default function Index({ preview, allPosts }) {
             key={3}
           >
             {/* <div className="flex flex-col justify-center items-center text-center mt-4 pb-8"> */}
-            <ContactGeneral />
+            <ContactGeneral submitted={submitted} setSubmitted={setSubmitted} />
             {/* </div> */}
           </div>
         </Container>
         <div className="min-h-[33vh]">
           {/* <FadeInSection key={2}> */}
-          <Map />
+          {/* <Map /> */}
           {/* </FadeInSection> */}
         </div>
       </Layout>
