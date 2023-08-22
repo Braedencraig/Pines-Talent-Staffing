@@ -7,12 +7,12 @@ export default async (req, res) => {
   const body = JSON.parse(req.body);
 
   const message = `
-  First Name: ${body.firstName}\r\n
-  Last Name: ${body.lastName}\r\n
-  Email: ${body.email}\r\n
-  Phone: ${body.phone}\r\n
-  Job Description: ${body.jobDescription}\r\n
-}`;
+    First Name: ${body.firstName}\r\n
+    Last Name: ${body.lastName}\r\n
+    Email: ${body.email}\r\n
+    Phone: ${body.phone}\r\n
+    Job Description: ${body.jobDescription}\r\n
+  }`;
 
   await mail.send({
     to: "darcy@pinestalent.com",

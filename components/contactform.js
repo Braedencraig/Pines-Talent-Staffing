@@ -98,7 +98,7 @@ export default function ContactForm({ submitted, setSubmitted }) {
             Phone
           </label>
           <input
-            {...register("phone", { required: true })}
+            {...register("phone", { required: false })}
             type="tel"
             value={formValues.phone}
             onChange={(e) =>

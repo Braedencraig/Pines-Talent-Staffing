@@ -14,9 +14,11 @@ export default function ContactGeneral({ submitted, setSubmitted }) {
     fetch("/api/contact", {
       method: "POST",
       body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) setSubmitted(true);
-    });
+    })
+      .then((res) => {
+        if (res.status === 200) setSubmitted(true);
+      })
+      .catch((err) => console.log(err));
   };
 
   if (submitted) {

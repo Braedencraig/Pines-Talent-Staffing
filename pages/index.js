@@ -126,7 +126,9 @@ export default function Index({ preview, allPosts }) {
             className="flex flex-col justify-center items-center text-center mt-20"
             key={2}
           >
-            <h3 className="text-4xl mb-6">PEOPLE FIRST APPROACH TO STAFFING</h3>
+            <h3 className="text-2xl md:text-4xl mb-6">
+              PEOPLE FIRST APPROACH TO STAFFING
+            </h3>
             {/* <h4 className="text-2xl mb-12">
               At Pines Talent, we believe that people are at the heart of every
               successful business.

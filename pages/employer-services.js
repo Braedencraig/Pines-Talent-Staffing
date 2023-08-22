@@ -114,7 +114,7 @@ export default function Index({ preview, allPosts }) {
               {employer.title}
             </h1>
             <h2 className="text-xl mb-4 font-black">{employer.title1}</h2>
-            <h2 className="text-xl">{employer.subtitle}</h2>
+            <h2 className="text-xl px-6">{employer.subtitle}</h2>
           </div>
         </div>
         <Container>

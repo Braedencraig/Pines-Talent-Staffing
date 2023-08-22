@@ -123,7 +123,7 @@ export default function Index({ preview, allPosts }) {
             <h2 className="text-xl mb-6 font-black">
               Looking to boost your chances of landing your dream job?
             </h2>
-            <h2 className="text-xl">
+            <h2 className="text-xl px-6">
               We offer a suite of applicant services designed to equip you with
               the tools and guidance you need to stand out in the job market.
             </h2>
