@@ -15,7 +15,7 @@ export default async (req, res) => {
     Salary Range: ${body.salaryRange}\r\n
     Start Date: ${body.startDate}\r\n
     LinkedIn Profile: ${body.linkedin}\r\n
-  }`;
+  `;
 
   await mail.send({
     to: "darcy@pinestalent.com",

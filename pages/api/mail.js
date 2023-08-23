@@ -12,7 +12,7 @@ export default async (req, res) => {
     Email: ${body.email}\r\n
     Phone: ${body.phone}\r\n
     Job Description: ${body.jobDescription}\r\n
-  }`;
+  `;
 
   await mail.send({
     to: "darcy@pinestalent.com",
