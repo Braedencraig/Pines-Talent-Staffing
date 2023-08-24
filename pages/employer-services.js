@@ -113,8 +113,8 @@ export default function Index({ preview, allPosts }) {
             <h1 className="text-[30px] lg:text-[60px] mb-12 font-bold">
               {employer.title}
             </h1>
-            <h2 className="text-xl mb-4 font-black">{employer.title1}</h2>
-            <h2 className="text-xl px-6">{employer.subtitle}</h2>
+            <h2 className="text-2xl mb-4 font-black">{employer.title1}</h2>
+            <h2 className="text-xl md:px-0 px-6">{employer.subtitle}</h2>
           </div>
         </div>
         <Container>

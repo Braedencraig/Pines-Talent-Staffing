@@ -28,7 +28,6 @@ export default function Navigation() {
           </div>
           <ul className="flex flex-row py-6">
             {navItems.map((item, i) => {
-              console.log(item.link === active);
               return (
                 <li key={i} className="ml-7">
                   <Link

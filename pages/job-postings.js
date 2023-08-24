@@ -118,7 +118,7 @@ export default function Index({ preview, allPosts, allJobs }) {
           </div>
         </div>
         <Container>
-          <div className="flex flex-col lg:flex-row flex-wrap mb-20">
+          <div className="flex flex-col lg:flex-row flex-wrap mb-20 justify-between">
             {/* <FadeInSection key={2}> */}
             {allJobs.length > 0 &&
               allJobs.map((job) => {

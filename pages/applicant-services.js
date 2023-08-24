@@ -117,13 +117,13 @@ export default function Index({ preview, allPosts }) {
             className="flex flex-col bg-white text-black w-full lg:w-1/2 max-w-[748px] services"
             key={1}
           >
-            <h1 className="text-[30px] lg:text-[60px] mb-6 font-bold">
+            <h1 className="text-[30px] lg:text-[60px] mb-12 font-bold">
               Applicant Services
             </h1>
-            <h2 className="text-xl mb-6 font-black">
+            <h2 className="text-2xl mb-6 font-black">
               Looking to boost your chances of landing your dream job?
             </h2>
-            <h2 className="text-xl px-6">
+            <h2 className="text-xl md:px-0 px-6">
               We offer a suite of applicant services designed to equip you with
               the tools and guidance you need to stand out in the job market.
             </h2>
