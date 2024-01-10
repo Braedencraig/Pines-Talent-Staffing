@@ -1,8 +1,8 @@
 {
   "navItems": [
     {
-      "name": "Job Postings",
-      "link": "/job-postings"
+      "name": "Apply",
+      "link": "/apply"
     },
     {
       "name": "Employer Services",
